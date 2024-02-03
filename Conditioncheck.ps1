@@ -5,7 +5,7 @@ Function LogWrite
 {
    Param ([string]$logstring)
    $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-   $logWithTimestamp = "{$timestamp}: $logstring"
+   $logWithTimestamp = "${timestamp}: $logstring"
    Add-content $Logfile -value $logWithTimestamp
 }
 
